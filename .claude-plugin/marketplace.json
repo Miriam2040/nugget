@@ -1,0 +1,6 @@
+{
+  "name": "nugget",
+  "description": "nugget: select any part of Claude's answer and keep it as a card",
+  "owner": { "name": "Miriam Horovicz" },
+  "plugins": [{ "name": "nugget", "source": "./" }]
+}

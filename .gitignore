@@ -1,0 +1,4 @@
+# Laid by Claude Code when it loads the mod from a folder it hot-reloads.
+.claude-plugin/types/
+node_modules/
+.DS_Store

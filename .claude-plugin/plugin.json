@@ -1,0 +1,49 @@
+{
+  "name": "nugget",
+  "version": "0.6.0",
+  "description": "Keep the golden nuggets from long answers: select text, /nugget, and it waits in a side pane, color-coded by what it means to you",
+  "author": {
+    "name": "Miriam Horovicz"
+  },
+  "license": "MIT",
+  "keywords": [
+    "notes",
+    "sticky-notes",
+    "tasks",
+    "mod",
+    "pane"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "yellow": {
+      "type": "string",
+      "title": "Yellow means",
+      "description": "What a yellow note is for; yellow notes are the ones with a to do / doing / done status",
+      "default": "Task"
+    },
+    "green": {
+      "type": "string",
+      "title": "Green means",
+      "description": "What a green note is for",
+      "default": "Decision"
+    },
+    "blue": {
+      "type": "string",
+      "title": "Blue means",
+      "description": "What a blue note is for",
+      "default": "Reference"
+    },
+    "pink": {
+      "type": "string",
+      "title": "Pink means",
+      "description": "What a pink note is for",
+      "default": "Question"
+    },
+    "orange": {
+      "type": "string",
+      "title": "Orange means",
+      "description": "What an orange note is for",
+      "default": "Problem"
+    }
+  }
+}
