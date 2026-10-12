@@ -6,7 +6,7 @@ Long Claude Code sessions bury the bits you need later: a command, a decision, a
 path, an open question. nugget keeps them in a side pane next to the
 conversation, color-coded by what they mean to you.
 
-![nugget demo: select part of Claude's answer, /nugget turns it into a decision card, Claude saves a task when asked, and the task moves from to do to doing to done](assets/nugget-demo.gif)
+![nugget demo: select part of Claude's answer, /nugget turns it into a decision card, Claude saves a task when asked, and the task moves from to do to doing to done](https://raw.githubusercontent.com/Miriam2040/nugget/media/nugget-demo.gif)
 
 ## Install
 
@@ -53,15 +53,21 @@ names.
 - Reading your selection needs Claude Code's fullscreen layout. Without it,
   type the text (`/nugget task rerun lint`) or ask Claude to save it.
 
-## Privacy
+## What nugget reads, and where it goes
 
-Your nuggets stay on your machine, in Claude Code's own plugin store under
-`~/.claude/plugins/store/`. nugget makes no network calls and sends nothing
-anywhere.
+- **Reads:** the text you selected in an answer (when you run `/nugget`), the text
+  you type after `/nugget`, or the text Claude passes to nugget's own
+  `save_nugget` tool when you ask it to save something.
+- **Stores:** those notes, on your machine, in Claude Code's plugin store under
+  `~/.claude/plugins/store/`. They stay until you drop them.
+- **Sends:** nothing over the network. The only thing that leaves the plugin is
+  the `copy` action, which puts a note's text on your clipboard when you click it.
+- **Tools:** nugget answers calls to its own `save_nugget` tool only; it never
+  stands in for any other tool.
 
 ## The demo video
 
-The demo is made with [Remotion](https://www.remotion.dev): `video/src/` describes every frame, so it can be re-rendered after a change.
+The demo is made with [Remotion](https://www.remotion.dev): `video/src/` describes every frame, so it can be re-rendered after a change. The rendered GIF lives on the `media` branch, so the plugin itself carries no media files.
 
 ```
 cd video && npm install && npm run render   # out/nugget.mp4
